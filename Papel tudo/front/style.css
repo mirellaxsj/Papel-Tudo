@@ -5,7 +5,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --white: #FFF;
+    --black: #000;
+    --orange: #F38F00;
+    --hoverOrange: #e08300;
+    --table-odd: #ecd9be;
+    --red: #7F0000;
+}
+
 body {
+
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -13,113 +23,182 @@ body {
     align-items: center;
     background: #f5f5f5;
     overflow: hidden;
+    border: var(--orange) 1px solid;
+    border-radius: 10px;
 }
 
 header {
-    width: 100%;
-    height: 10vh;
     display: flex;
-    flex-direction: row;
+    width: 100vw;
+    height: 0%;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.container {
+
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    background: #fff;
-    color: #000;
+    gap: 20px;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header-form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+
+}
+
+.header-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-form div label {
+    margin-bottom: 5px;
+}
+
+input {
+    
+    width: 200px;
+    border: 1px solid var(--orange);
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+}
+
+.header-form div input[type="submit"] {
+    width: 100px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 1px var(--black);
+}
+
+.header-form div input[type="submit"]:hover {
+    background-color: var(--hoverOrange);
 }
 
 main {
     width: 100%;
-    height: 80vh;
-    max-width: 1200px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
+.containerMain {
+
+    width: 98%;
+    height: 100%;
+    display: flex;
+    border: 1px solid var(--hoverOrange);
+    border-radius: 8px;
+
+}
+
+.containerFooter {
+
+    width: 98%;
+    height: 100%;
+    display: flex;
+    border: 1px solid var(--hoverOrange);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1000px;
+
+}
+
+
+.containerFooter div {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerFooter div label {
+    margin-bottom: 10px;
+}
+
+.containerFooter input {
+
+   height: 100px;
+}
+
 footer {
+
+    display: flex;
     width: 100%;
     height: 10vh;
     padding: 20px 0;
     background: #fff;
     text-align: center;
     color: #000;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
 }
 
-nav {
-    height: 5vh;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-a,
 button {
+
     text-decoration: none;
     color: #fff;
-    background: #000;
+    background: var(--hoverOrange);
     padding: 10px 20px;
+    border: var(--hoverOrange) 1px solid;
     border-radius: 5px;
     transition: 0.2s;
     cursor: pointer;
 }
 
-nav button{
-    background: #fff;
-    color: #000;
-    font-weight: bold;
-}
-
 table {
-    max-width: 800px;
-    display: block;
-    border-collapse: collapse;
-    overflow-y: auto;
-}
-
-thead {
+    
     width: 100%;
-    display: block;
-    background: #000;
-    color: #fff;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-thead tr {
-    display: flex;
-    justify-content: space-around;
+tr:nth-child(even){
+    background: rgba(255, 255, 190, 0.988);
 }
 
-tbody {
-    max-height: 70vh;
-    display: block;
-    overflow-y: scroll;
-}
-
-tr:nth-child(even) {
-    background: #dddddd;
-}
-
-tr {
+tr{
     border-bottom: 1px solid #ccc;
 }
 
-th,
-td {
+th, td{
+
     padding: 10px 20px;
     text-align: left;
+    color:#000;
+}
+
+th{
+
+    font-size: 20px;
 }
 
 form {
+    
     width: 100%;
-    max-width: 500px;
+    height: 100%;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     margin: 20px 0;
 }
 
-input,
 textarea {
     width: 100%;
     padding: 10px;
@@ -155,5 +234,6 @@ textarea {
 }
 
 .oculto {
+
     display: none;
 }
